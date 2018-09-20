@@ -12,20 +12,13 @@ int main(void)
 
 	players = genRandomPlayers(30); //if param == 0, the length of the list will be random between 1 and 1.000
 
-	/*-------------------
-	launch your test here
-	--------------------*/
 	printPlayers(players);
-	//printf("doing the merge sort...\n");
-	//players = mergeSort(players);
-	//printPlayers(players);
+	printf("\ndoing the merge sort...\n\n");
+	players = mergeSort(players);
+	printPlayers(players);
 
 	return (0);
 }
-
-
-// Function used for the test
-// Don't go further :)
 
 void printPlayers(struct s_player **players)
 {
