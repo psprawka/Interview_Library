@@ -10,13 +10,10 @@ int main(void)
 	struct s_city *city;
 
 	city = getCities();
-
-	/*-------------------
-	launch your test here
-	--------------------*/
-	//printf("%s\n", NthLastCity(city, 2)); //should return 'Kobylin'
-	//printf("%s\n", NthLastCity(city, 10)); //should return 'Jastrzebie-Zdroj'
-
+	printf("%s\n", NthLastCity(city, 0)); //should return 'Wyrzysk'
+	printf("%s\n", NthLastCity(city, 2)); //should return 'Kobylin'
+	printf("%s\n", NthLastCity(city, 10)); //should return 'Jastrzebie-Zdroj'
+	printf("%s\n", NthLastCity(city, 1000)); //should return 'NULL'
 	return (0);
 }
 

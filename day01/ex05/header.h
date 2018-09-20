@@ -17,7 +17,8 @@ struct s_tank {
 };
 
 struct s_tank *initTank(void);
-void tankPush(struct s_tank *tank, int energy);
-int tankPop(struct s_tank *tank);
+void    tankPush(struct s_tank *tank, int energy);
+int     tankPop(struct s_tank *tank);
+void	printStacks(struct s_tank *tank);
 
 #endif
