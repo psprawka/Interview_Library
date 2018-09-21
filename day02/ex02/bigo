@@ -1,0 +1,2 @@
+time: O(n2) worst case, O(n log(n)) average
+space: O(log(n))
