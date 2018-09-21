@@ -10,7 +10,7 @@ int main(void)
 {
 	struct s_player **players;
 
-	players = genRandomPlayers(30); //if param == 0, the length of the list will be random between 1 and 1.000
+	players = genRandomPlayers(0); //if param == 0, the length of the list will be random between 1 and 1.000
 
 	/*-------------------
 	launch your test here
