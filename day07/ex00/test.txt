@@ -1,0 +1,7 @@
+Mami => 12
+Janek => 444
+Pola => 121
+Babcia => 8
+Wiesio 2 => 45
+Kot => 86
+Calum => 674
