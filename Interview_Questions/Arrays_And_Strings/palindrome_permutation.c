@@ -6,7 +6,7 @@
 /*   By: psprawka <psprawka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/29 08:09:57 by psprawka          #+#    #+#             */
-/*   Updated: 2018/09/29 10:55:03 by psprawka         ###   ########.fr       */
+/*   Updated: 2018/09/30 08:31:18 by psprawka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,12 @@ bool	palindrome_permutation(char *str)
 {
 	int		check[127] = {0};
 	int		i;
+	bool	odd;
 
 	for (i = 0; str[i]; i++)
 		check[str[i]]++;
 		
-	for (bool odd = 0, i = 0; i < 127; i++)
+	for (odd = false, i = 0; i < 127; i++)
 	{
 		if (check[i] % 2)
 		{

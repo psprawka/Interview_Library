@@ -6,7 +6,7 @@
 /*   By: psprawka <psprawka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/29 08:09:25 by psprawka          #+#    #+#             */
-/*   Updated: 2018/09/29 15:29:02 by psprawka         ###   ########.fr       */
+/*   Updated: 2018/09/30 21:23:48 by psprawka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,26 @@
 **	string has sufficient space at the end to hold additional chars and that
 **	you are given the "true" length of string.
 */
+#include <stdio.h>
 
-void	URLify(char *str, int true_len)
+void	URLify(char *str, int len)
 {
-	int		len, spaces = 0;
+	int		new_len, spaces = 0;
 	
-	for (int i = 0; i < true_len; i++)
+	for (int i = 0; i < len; i++)
 		if (str[i] == ' ')
 			spaces++;
 	
-	for (int len = true_len - 1 + spaces * 3; len >= 0; len-- && true_len--)
+	len -= 1;
+	for (int new_len = len - spaces + spaces * 3; len >= 0; new_len-- && len--)
 	{
-		if (str[true_len] == ' ')
+		if (str[len] == ' ')
 		{
-			str[len--] = '0';
-			str[len--] = '2';
-			str[len] = '%';
+			str[new_len--] = '0';
+			str[new_len--] = '2';
+			str[new_len] = '%';
 		}
 		else
-			str[len] = str[true_len];
+			str[new_len] = str[len];
 	}
 }
