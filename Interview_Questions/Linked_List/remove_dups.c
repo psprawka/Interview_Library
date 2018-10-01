@@ -6,7 +6,7 @@
 /*   By: psprawka <psprawka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/01 10:12:53 by psprawka          #+#    #+#             */
-/*   Updated: 2018/10/01 11:43:14 by psprawka         ###   ########.fr       */
+/*   Updated: 2018/10/01 11:59:32 by psprawka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,3 +63,9 @@ void	remove_dups(t_node *head)
 	}
 	ft_free_table_ht(ht);
 }
+
+/*
+**	If no buffer is allowed (so no additional memory), we have to do it in place;
+**	for each element we would gho through entire linked list to see if there are
+**	duplicates and remove them. It gives us O(1) space and O(n2) time complexity.
+*/
