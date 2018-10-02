@@ -6,7 +6,7 @@
 /*   By: psprawka <psprawka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/01 10:13:48 by psprawka          #+#    #+#             */
-/*   Updated: 2018/10/01 15:16:24 by psprawka         ###   ########.fr       */
+/*   Updated: 2018/10/01 17:16:50 by psprawka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,23 +24,32 @@ typedef struct	s_data {
 }				t_data;
 
 
-void	partition(t_node *head, int value)
+void	partition(t_node **head, int value)
 {
-	t_node *start, *end, *next;
+	t_node *start, *end, *next, *list;
 
-	if (!head || !head->next)
+	if (!(*head) || !(*head)->next)
 		return ;
-		
-	start = head;
-	end = head;
-	head = head->next;
-	next = head->next;
 	
-	while (head)
+	start = *head;
+	end = *head;
+	list = (*head)->next;
+	
+	while (list)
 	{
-		if (((t_data *)head->data)->value < value)
-			ft_add_front_list(&start, hea)
-
-		
+		next = list->next;
+		if (((t_data *)list->data)->value < value)
+		{
+			list->next = start;
+			start = list;
+		}
+		else
+		{
+			end->next = list;
+			end = end->next;
+			end->next = NULL;
+		}
+		list = next;
 	}
+	*head = start;
 }

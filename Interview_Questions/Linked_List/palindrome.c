@@ -6,8 +6,13 @@
 /*   By: psprawka <psprawka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/01 10:14:08 by psprawka          #+#    #+#             */
-/*   Updated: 2018/10/01 10:14:10 by psprawka         ###   ########.fr       */
+/*   Updated: 2018/10/01 17:59:20 by psprawka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../Libft/includes/libft.h"	/*	linked list	 */
+
+typedef struct	s_data {
+	int	value;
+}				t_data;
 
