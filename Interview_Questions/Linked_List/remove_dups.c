@@ -6,7 +6,7 @@
 /*   By: psprawka <psprawka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/01 10:12:53 by psprawka          #+#    #+#             */
-/*   Updated: 2018/10/01 11:59:32 by psprawka         ###   ########.fr       */
+/*   Updated: 2018/10/07 23:23:43 by psprawka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ int		cmp(void *node1, void *node2)
 
 	return (((t_data *)node1)->value == ((t_data *)node2)->value ? EXIT_SUCCESS : EXIT_FAILURE);
 }
-
 
 
 void	remove_dups(t_node *head)

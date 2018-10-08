@@ -6,13 +6,18 @@
 /*   By: psprawka <psprawka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/01 10:14:20 by psprawka          #+#    #+#             */
-/*   Updated: 2018/10/01 23:53:56 by psprawka         ###   ########.fr       */
+/*   Updated: 2018/10/07 23:23:00 by psprawka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	Intersection: Given two single linked lists, determine if two linked lists
+**	intersect. Return the intersecting node (intersection is based on addresses,
+**	not value!).
+*/
+
 #include "../Libft/includes/libft.h"	/*	linked list	 */
 #include <stdbool.h>
-
 
 t_node	*intersection(t_node *l1, t_node *l2)
 {

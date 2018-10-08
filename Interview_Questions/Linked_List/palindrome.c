@@ -6,9 +6,13 @@
 /*   By: psprawka <psprawka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/01 10:14:08 by psprawka          #+#    #+#             */
-/*   Updated: 2018/10/01 23:30:02 by psprawka         ###   ########.fr       */
+/*   Updated: 2018/10/07 23:37:29 by psprawka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+**	Palindrome: Implement a function to check if a linked list is a palindrome.
+*/
 
 #include "../Libft/includes/libft.h"	/*	linked list	 */
 #include <stdbool.h>
@@ -35,7 +39,6 @@ bool	palindrome(t_node *list)
 		if (p2 && p2->next)
 			p2 = p2->next;
 	}
-	printf("hello\n");
 	print_list(p1);
 	print_list(stack);
 	while (stack && p1)
@@ -45,6 +48,5 @@ bool	palindrome(t_node *list)
 		ft_remove_list(&stack, stack);
 		p1 = p1->next;
 	}
-	printf("helldsdsao\n");
 	return (stack || p1 ? false : true);
 }
