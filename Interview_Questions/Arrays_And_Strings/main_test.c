@@ -6,7 +6,7 @@
 /*   By: psprawka <psprawka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/29 08:13:32 by psprawka          #+#    #+#             */
-/*   Updated: 2018/10/07 18:56:17 by psprawka         ###   ########.fr       */
+/*   Updated: 2018/10/07 22:01:48 by psprawka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ char	*string_compression(char *str);
 bool	one_away(char *s1, char *s2);
 void	rotate_matrix(int **matrix, int n);
 void	zero_matrix(int **matrix, int rows, int columns);
+bool	string_rotation(char *s1, char *s2);
 
 int main(int ac, char **av)
 {
@@ -51,12 +52,12 @@ int main(int ac, char **av)
 	
 	
 	/////////////////////////////// 1.7 /////////////////////////////////////////////
+	
 	// int		size = 5;
 	// int		**matrix;
 
 	// if (!(matrix = (int **)malloc(sizeof(int *) * size)))
 	// 	return (0);
-	
 	// for (int i = 0; i < size; i++)
 	// {
 	// 	matrix[i] = (int *)malloc(sizeof(int) * size);
@@ -76,40 +77,46 @@ int main(int ac, char **av)
 	// 	printf("\n");
 	// }
 	// printf("\n");
-	/////////////////////////////////////////////////////////////////////////
+	
 
 	//////////////////////////////// 1.8 /////////////////////////////////////////
 
-	
-	int		rows = 5, columns = 6;
-	int		**matrix;
+	// int		rows = 5, columns = 6;
+	// int		**matrix;
 	
 
-	srand(time(0));
-	if (!(matrix = (int **)malloc(sizeof(int *) * rows)))
-		return (0);
-		
-	printf("\n");
-	for (int i = 0; i < rows; i++)
-	{
-		matrix[i] = (int *)malloc(sizeof(int) * columns);
-		for (int j = 0; j < columns; j++)
-		{
-			matrix[i][j] = rand() % (rows * 2);
-			printf("%d ", matrix[i][j]);
-		}
-		printf("\n");
-	}
-	printf("\n\n");
+	// srand(time(0));
+	// if (!(matrix = (int **)malloc(sizeof(int *) * rows)))
+	// 	return (0);
+	// printf("\n");
+	// for (int i = 0; i < rows; i++)
+	// {
+	// 	matrix[i] = (int *)malloc(sizeof(int) * columns);
+	// 	for (int j = 0; j < columns; j++)
+	// 	{
+	// 		matrix[i][j] = rand() % (rows * 2);
+	// 		printf("%d ", matrix[i][j]);
+	// 	}
+	// 	printf("\n");
+	// }
+	// printf("\n\n");
+	// zero_matrix(matrix, rows, columns);
+	// for (int i = 0; i < rows ; i++)
+	// {
+	// 	for (int j = 0; j < columns; j++)
+	// 		printf("%d ", matrix[i][j]);
+	// 	printf("\n");
+	// }
+	// printf("\n");
 	
-	zero_matrix(matrix, rows, columns);
-	for (int i = 0; i < rows ; i++)
-	{
-		for (int j = 0; j < columns; j++)
-			printf("%d ", matrix[i][j]);
-		printf("\n");
-	}
-	printf("\n");
+	//////////////////////////////// 1.8 /////////////////////////////////////////
+
+	// char *s1 = "water bottle";
+	// char *s2 = "bottlewater ";
+	// char *s2fake = "bottlewater";
+
+	// printf("s1:[%s] | s2: [%s] | String rotation? %s\n", s1, s2, string_rotation(s1, s2) ? "true" : "false");
+	// printf("s1:[%s] | s2: [%s] | String rotation? %s\n", s1, s2fake, string_rotation(s1, s2fake) ? "true" : "false");
 	
 	/* ========================================================================================== */
 	
