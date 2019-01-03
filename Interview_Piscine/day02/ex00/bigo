@@ -1,0 +1,2 @@
+time: O(n2) worst case
+space: O(1+k) k - nb of groups
